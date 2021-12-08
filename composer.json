@@ -1,0 +1,40 @@
+{
+    "name": "winstor/iseed",
+    "description": "Generate a new Laravel database seed file based on data from the existing database table.",
+    "license": "BSD-2-Clause",
+    "require": {
+        "php": "^7.2|^8.0",
+        "illuminate/support": "~5.5.0|~5.6.0|~5.7.0|~5.8.0|^6.0|^7.0|^8.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.0.0",
+        "illuminate/filesystem": "~5.5.0|~5.6.0|~5.7.0|~5.8.0|^6.0|^7.0|^8.0",
+        "laravel/framework": "~5.5.0|~5.6.0|~5.7.0|~5.8.0|^6.0|^7.0|^8.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "Orangehill\\Iseed": "src/"
+        },
+        "classmap": [
+            "src/Orangehill/Iseed/Exceptions.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Orangehill\\Iseed\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Orangehill\\Iseed\\IseedServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
